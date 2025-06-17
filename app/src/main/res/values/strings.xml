@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">My calculator</string>
+    <string name="str_add">+</string>
+    <string name="str_minus">-</string>
+    <string name="str_div">/</string>
+    <string name="str_multiply">x</string>
+    <string name="str_firstNumber">First number</string>
+    <string name="str_secondNumber">Second number</string>
 </resources>

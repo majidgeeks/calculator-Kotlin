@@ -95,7 +95,7 @@
         </com.google.android.material.button.MaterialButton>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/multiply"
+            android:id="@+id/btnMultiply"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -108,11 +108,32 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/txtResultLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/linear"
-        
-        android:text="Result">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="40sp"
+        android:textColor="@color/black"
+        android:text="@string/str_result">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txtResultLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="40sp"
+        android:textColor="@color/black"
+        tools:text="0123456789">
 
     </TextView>
 

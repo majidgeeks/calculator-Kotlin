@@ -1,14 +1,10 @@
 package com.practice.mycalculator
 
 import android.os.Bundle
-import android.text.TextUtils
-import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.google.android.material.button.MaterialButton
-import com.google.android.material.textfield.TextInputEditText
 import com.practice.mycalculator.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -24,15 +20,13 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
        calculate()
-
     }
-    fun calculate(){
+   private fun calculate(){
         binding?.apply {
-                var firstInput = textInput1
-                var secondInput = textInput2
-                var resultView = txtResult
+                val firstInput = textInput1
+                val secondInput = textInput2
+                val resultView = txtResult
                     fun performCal(operator : String){
                         val firstNumber = firstInput.text.toString().toIntOrNull()
                         val secondNumber = secondInput.text.toString().toIntOrNull()
@@ -48,8 +42,8 @@ class MainActivity : AppCompatActivity() {
                             "-" -> firstNumber - secondNumber
                             "X" -> firstNumber * secondNumber
                             "/" -> {
-                                if(secondNumber === 0){
-                                    resultView.text = "Cannot divide by 0"
+                                if(secondNumber == 0){
+                                    resultView.text = getString(R.string.cannot_divide_by_0)
                                     return
                                 }else{
                                     firstNumber / secondNumber

@@ -9,4 +9,5 @@
     <string name="str_result">Result</string>
     <string name="str_first_input_error">Please enter first number</string>
     <string name="str_second_input_error">Please enter second number</string>
+    <string name="cannot_divide_by_0">Cannot divide by 0</string>
 </resources>
